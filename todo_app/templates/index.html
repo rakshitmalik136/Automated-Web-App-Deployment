@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <form action="{{ url_for('add') }}" method="post">
+    <input type="text" name="content" placeholder="Enter new task" required>
+    <button type="submit">Add</button>
+  </form>
+
+  <ul>
+    {% for task in tasks %}
+      <li>
+        {{ task[1] }}
+        <a href="{{ url_for('delete', task_id=task[0]) }}">❌</a>
+      </li>
+    {% else %}
+      <p>No tasks yet!</p>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
