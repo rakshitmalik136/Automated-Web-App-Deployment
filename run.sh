@@ -8,7 +8,7 @@ set -e
 if [ -d "venv" ]; then
     source venv/bin/activate
 else
-    echo "⚠️  No virtual environment found. Run 'python3 -m venv venv' first."
+    echo "⚠️ No virtual environment found. Run 'python3 -m venv venv' first."
 fi
 
 # Install dependencies
