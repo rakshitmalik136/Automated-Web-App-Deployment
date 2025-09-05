@@ -11,7 +11,7 @@ pipeline{
         stage("Code Build & Test"){
             steps{
                 echo "Code Build Stage"
-                sh 'docker build -t flask-todo .'
+                sh 'docker build -t flask-app .'
             }
         }
         stage("Push To DockerHub"){
