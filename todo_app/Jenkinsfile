@@ -5,7 +5,7 @@ pipeline{
         stage("Code Clone"){
             steps{
                 echo "Code Clone Stage"
-                git url: "git@github.com:rakshitmalik136/Automated-Web-App-Deployment.git", branch: "main"
+                git url: "https://github.com/rakshitmalik136/Automated-Web-App-Deployment.git", branch: "main"
             }
         }
         stage("Code Build & Test"){
